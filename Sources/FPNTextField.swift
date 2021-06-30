@@ -50,7 +50,11 @@ open class FPNTextField: UITextField {
 		}
 	}
     
-    open var separatorViewColor: UIColor = .blue
+    open var separatorViewColor: UIColor = .white {
+        didSet {
+            separatorView.backgroundColor = separatorViewColor
+        }
+    }
 
 	open override var textColor: UIColor? {
 		didSet {
@@ -143,7 +147,6 @@ open class FPNTextField: UITextField {
     private func setupExtra() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.translatesAutoresizingMaskIntoConstraints = false
-        separatorView.backgroundColor = separatorViewColor
     }
 
 	private func setupLeftView() {
