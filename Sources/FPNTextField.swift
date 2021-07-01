@@ -245,7 +245,8 @@ open class FPNTextField: UITextField {
 	}
 
 	@objc private func dismissCountries() {
-		resignFirstResponder()
+		becomeFirstResponder()
+        text = nil
 		inputView = nil
 		inputAccessoryView = nil
 		reloadInputViews()
